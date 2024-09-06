@@ -18,7 +18,7 @@ public class CustomerService {
         return customer.getId();
     }
 
-    public Void updateCustomer(CustomerRequest updateRequest) {
+    public void updateCustomer(CustomerRequest updateRequest) {
         var customer = repository.findById(updateRequest.id())
                 .orElseThrow(() -> new CustomerNotFoundException("Customer not found"));
 

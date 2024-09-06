@@ -20,7 +20,8 @@ public class CustomerController {
 
     @PutMapping
     public ResponseEntity<Void> updateCustomer(@RequestBody @Valid CustomerRequest updateRequest ){
-        return ResponseEntity.ok(service.updateCustomer(updateRequest));
+        this.service.updateCustomer(updateRequest);
+        return ResponseEntity.accepted().build();
     }
 
     @GetMapping
