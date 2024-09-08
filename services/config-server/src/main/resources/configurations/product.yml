@@ -6,7 +6,7 @@ spring:
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto: validate # cos we are using flyway to create the tables for us
+      ddl-auto: validate # cos we are using flyway to create the schema for us
       database: postgresql
       database-platform: org.hibernate.dialect.PostgreSQLDialect
   flyway:
